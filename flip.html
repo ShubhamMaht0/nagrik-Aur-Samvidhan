@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Card Game - Constitution of India</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <link rel="stylesheet" href="flipStyles.css">
+    
+</head>
+<body>
+    <div class="container"></div>
+        <aside class="sidebar" id="sidebar">
+            <h2>My Dashboard</h2>
+            <img src="img/profile-pic.jpg" alt="Profile Picture" class="profile-img">
+            <p>Welcome, Learner!</p>
+            <nav>
+                <div class="menu-item" onclick="window.location.href='home.html'"><i class="fas fa-home"></i> Home</div>
+                <div class="menu-item"><i class="fas fa-user"></i> Profile</div>
+                <div class="menu-item"><i class="fas fa-book"></i> My Courses</div>
+                <div class="menu-item" onclick="window.location.href='progress.html'"><i class="fas fa-chart-line"></i> Progress</div>
+                <div class="menu-item" onclick="window.location.href='rewards.html'"><i class="fas fa-trophy"></i> Achievements</div>
+                <div class="menu-item"><i class="fas fa-cog"></i> Settings</div>
+                <div class="menu-item" onclick="window.location.href='login.html'"><i class="fas fa-sign-in-alt"></i> Login</div>
+            </nav>
+        </aside>
+        <main class="main-content" id="main-content">
+            <header>
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Nagrik Aur Samvidhan Learning Platform</h1>
+            </header>
+            <div class="game-container">
+                <h1>Learn the Constitution of India</h1>
+                <div class="game-board">
+                    <div class="game-board">
+                        <!-- Preamble Cards -->
+                        <div class="card" data-name="preamble">
+                            <div class="front">?</div>
+                            <div class="back">Preamble</div>
+                        </div>
+                        <div class="card" data-name="preamble">
+                            <div class="front">?</div>
+                            <div class="back">We, the people of India...</div>
+                        </div>
+                        
+                        <!-- Fundamental Rights Cards -->
+                        <div class="card" data-name="fundamental-rights">
+                            <div class="front">?</div>
+                            <div class="back">Fundamental Rights</div>
+                        </div>
+                        <div class="card" data-name="fundamental-rights">
+                            <div class="front">?</div>
+                            <div class="back">Right to Equality, Right to Freedom...</div>
+                        </div>
+                        
+                        <!-- Directive Principles Cards -->
+                        <div class="card" data-name="directive-principles">
+                            <div class="front">?</div>
+                            <div class="back">Directive Principles</div>
+                        </div>
+                        <div class="card" data-name="directive-principles">
+                            <div class="front">?</div>
+                            <div class="back">Guidelines for the framing of laws...</div>
+                        </div>
+                    
+                        <!-- Fundamental Duties Cards -->
+                        <div class="card" data-name="fundamental-duties">
+                            <div class="front">?</div>
+                            <div class="back">Fundamental Duties</div>
+                        </div>
+                        <div class="card" data-name="fundamental-duties">
+                            <div class="front">?</div>
+                            <div class="back">Respect the Constitution, cherish its ideals...</div>
+                        </div>
+                    
+                        <!-- Union and its Territory Cards -->
+                        <div class="card" data-name="union-territory">
+                            <div class="front">?</div>
+                            <div class="back">Union and its Territory</div>
+                        </div>
+                        <div class="card" data-name="union-territory">
+                            <div class="front">?</div>
+                            <div class="back">India, that is Bharat, shall be a Union of States...</div>
+                        </div>
+                    
+                        <!-- Judiciary Cards -->
+                        <div class="card" data-name="judiciary">
+                            <div class="front">?</div>
+                            <div class="back">Judiciary</div>
+                        </div>
+                        <div class="card" data-name="judiciary">
+                            <div class="front">?</div>
+                            <div class="back">Supreme Court, High Courts, Subordinate Courts...</div>
+                        </div>
+                    
+                        <!-- Parliament Cards -->
+                        <div class="card" data-name="parliament">
+                            <div class="front">?</div>
+                            <div class="back">Parliament</div>
+                        </div>
+                        <div class="card" data-name="parliament">
+                            <div class="front">?</div>
+                            <div class="back">Rajya Sabha, Lok Sabha...</div>
+                        </div>
+                    </div>            
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="flipScripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Options - Nagrik Aur Samvidhan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <link href="homeStyles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <h2>My Dashboard</h2>
+            <img src="img/profile-pic.jpg" alt="Profile Picture" class="profile-img">
+            <p>Welcome, Learner!</p>
+            <nav>
+                <div class="menu-item" onclick="window.location.href='home.html'"><i class="fas fa-home"></i> Home</div>
+                <div class="menu-item"><i class="fas fa-user"></i> Profile</div>
+                <div class="menu-item"><i class="fas fa-book"></i> My Courses</div>
+                <div class="menu-item" onclick="window.location.href='progress.html'"><i class="fas fa-chart-line"></i> Progress</div>
+                <div class="menu-item" onclick="window.location.href='rewards.html'"><i class="fas fa-trophy"></i> Achievements</div>
+                <div class="menu-item"><i class="fas fa-cog"></i> Settings</div>
+                <div class="menu-item" onclick="window.location.href='login.html'"><i class="fas fa-sign-in-alt"></i> Login</div>
+            </nav>
+        </aside>
+        <main class="main-content" id="main-content">
+            <header>
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Game Options</h1>
+            </header>
+
+            <div class="dashboard">
+                <div class="card" onclick="window.location.href='spin.html'">
+                    <i class="fas fa-dharmachakra card-icon"></i>
+                    <h3>Spin The Wheel</h3>
+                    <p>Test your knowledge of the Indian Constitution!</p>
+                    <a href="spin.html" class="play-button">Play Now</a>
+                </div>
+                <div class="card" onclick="window.location.href='snake.html'">
+                    <i class="fas fa-dice card-icon"></i>
+                    <h3>Snake and Ladder</h3>
+                    <p>Answer quiz questions to advance!</p>
+                    <a href="snake.html" class="play-button">Play Now</a>
+                </div>
+                <div class="card" onclick="window.location.href='flip.html'">
+                    <i class="fas fa-sim-card card-icon"></i>
+                    <h3>Flip The Card</h3>
+                    <p>Learn about your rights in an interactive way!</p>
+                    <a href="flip.html" class="play-button">Play Now</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="homeScripts.js"></script>
+</body>
+</html>

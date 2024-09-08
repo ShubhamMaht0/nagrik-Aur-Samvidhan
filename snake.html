@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake and Ladder Constitution Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <link href="snakeStyles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container"></div>
+        <aside class="sidebar" id="sidebar">
+            <h2>My Dashboard</h2>
+            <img src="img/profile-pic.jpg" alt="Profile Picture" class="profile-img">
+            <p>Welcome, Learner!</p>
+            <nav>
+                <div class="menu-item" onclick="window.location.href='home.html'"><i class="fas fa-home"></i> Home</div>
+                <div class="menu-item"><i class="fas fa-user"></i> Profile</div>
+                <div class="menu-item"><i class="fas fa-book"></i> My Courses</div>
+                <div class="menu-item" onclick="window.location.href='progress.html'"><i class="fas fa-chart-line"></i> Progress</div>
+                <div class="menu-item" onclick="window.location.href='rewards.html'"><i class="fas fa-trophy"></i> Achievements</div>
+                <div class="menu-item"><i class="fas fa-cog"></i> Settings</div>
+                <div class="menu-item" onclick="window.location.href='login.html'"><i class="fas fa-sign-in-alt"></i> Login</div>
+            </nav>
+        </aside>
+        <main class="main-content" id="main-content">
+            <header>
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Nagrik Aur Samvidhan Learning Platform</h1>
+            </header>
+      
+            <div class="dashboard">
+                <div class="game-container">
+                    <div class="board">
+                        <div id="player1" class="player"></div>
+                        <div id="player2" class="player"></div>
+                    </div>
+                    <div class="controls">
+                        <button id="rollDice">Roll Dice</button>
+                        <div id="currentPlayer">Current Player: 1</div>
+                        <div id="diceResult"></div>
+                        <div id="playerPositions">
+                            <div>Player 1 Position: 1</div>
+                            <div>Player 2 Position: 1</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="question-modal">
+                    <div class="modal-content">
+                        <h2>Constitution Question</h2>
+                        <p id="question"></p>
+                        <input type="text" id="answer" placeholder="Your answer">
+                        <button id="submitAnswer">Submit Answer</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="snakeGame.js"></script>
+</body>
+</html>

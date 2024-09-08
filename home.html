@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagrik Aur Samvidhan Learning Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <link href="homeStyles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <h2>My Dashboard</h2>
+            <img src="img/profile-pic.jpg" alt="Profile Picture" class="profile-img">
+            <p>Welcome, Learner!</p>
+            <nav>
+                <div class="menu-item" onclick="window.location.href='home.html'"><i class="fas fa-home"></i> Home</div>
+                <div class="menu-item"><i class="fas fa-user"></i> Profile</div>
+                <div class="menu-item"><i class="fas fa-book"></i> My Courses</div>
+                <div class="menu-item" onclick="window.location.href='progress.html'"><i class="fas fa-chart-line"></i> Progress</div>
+                <div class="menu-item" onclick="window.location.href='rewards.html'"><i class="fas fa-trophy"></i> Achievements</div>
+                <div class="menu-item"><i class="fas fa-cog"></i> Settings</div>
+                <div class="menu-item" onclick="window.location.href='login.html'"><i class="fas fa-sign-in-alt"></i> Login</div>
+            </nav>
+        </aside>
+        <main class="main-content" id="main-content">
+            <header>
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Nagrik Aur Samvidhan Learning Platform</h1>
+            </header>
+      
+            <div class="dashboard">
+                <div class="card" onclick="window.location.href='course.html'">
+                    <i class="fas fa-book card-icon"></i>
+                    <h3>Current Courses</h3>
+                    <ul class="course-list">
+                        <li class="course-item">
+                            <span>Indian Constitution Basics</span>
+                            <span class="badge">In Progress</span>
+                        </li>
+                        <li class="course-item">
+                            <span>Fundamental Rights</span>
+                            <span class="badge">New</span>
+                        </li>
+                        <li class="course-item">
+                            <span>Directive Principles</span>
+                            <span class="badge">Coming Soon</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card" onclick="window.location.href='game.html'">
+                  <i class="fas fa-gamepad card-icon"></i>
+                  <h3>Play Time</h3>
+                  <p>Keep track of your game points</p>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 10%;"></div>
+                  </div>
+                  <p>10% Complete</p>
+                </div>
+                
+                <div class="card" onclick="window.location.href='progress.html'">
+                    <i class="fas fa-graduation-cap card-icon"></i>
+                    <h3>My Learning Progress</h3>
+                    <p>Keep track of your course completion</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%;"></div>
+                    </div>
+                    <p>60% Complete</p>
+                </div>
+                <div class="card" onclick="window.location.href='quiz.html'">
+                  <i class="fas fa-question card-icon"></i>
+                  <h3>Quiz Time</h3>
+                  <p>Answered Correctly</p>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 90%;"></div>
+                  </div>
+                  <p>90% Correct</p>
+                </div>
+                
+                <div class="card" onclick="window.location.href='rewards.html'">
+                    <i class="fas fa-medal card-icon"></i>
+                    <h3>Achievements</h3>
+                    <p>Your latest accomplishments</p>
+                    <ul class="course-list">
+                        <li class="course-item">
+                            <span>Constitution Quiz Master</span>
+                            <i class="fas fa-star" style="color: gold;"></i>
+                        </li>
+                        <li class="course-item">
+                            <span>Rights & Duties Expert</span>
+                            <i class="fas fa-award" style="color: silver;"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <i class="fas fa-chart-bar card-icon"></i>
+                    <h3>Learning Statistics</h3>
+                    <p>Your learning activity this week</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                    <p>5 hours of study time</p>
+                </div>
+                <div class="card" onclick="window.location.href='feedback.html'">
+                  <i class="fas fa-comments card-icon"></i>
+                  <h3>Feedback</h3>
+                  <ul class="course-list">
+                      <li class="course-item">
+                          <span>I like the game section!</span>
+                          <span class="badge">Good</span>
+                      </li>
+                      <li class="course-item">
+                          <span>Lots of contents..</span>
+                          <span class="badge">Nice</span>
+                      </li>
+                      <li class="course-item">
+                          <span>Boring!!!</span>
+                          <span class="badge">Very bad</span>
+                      </li>
+                  </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="homeScripts.js"></script>
+</body>
+</html>

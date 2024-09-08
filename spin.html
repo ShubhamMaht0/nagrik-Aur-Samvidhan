@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin the Wheel Game - Constitution Articles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <link rel="stylesheet" href="spinStyles.css">
+</head>
+<body>
+    <div class="container"></div>
+        <aside class="sidebar" id="sidebar">
+            <h2>My Dashboard</h2>
+            <img src="img/profile-pic.jpg" alt="Profile Picture" class="profile-img">
+            <p>Welcome, Learner!</p>
+            <nav>
+                <div class="menu-item" onclick="window.location.href='home.html'"><i class="fas fa-home"></i> Home</div>
+                <div class="menu-item"><i class="fas fa-user"></i> Profile</div>
+                <div class="menu-item"><i class="fas fa-book"></i> My Courses</div>
+                <div class="menu-item" onclick="window.location.href='progress.html'"><i class="fas fa-chart-line"></i> Progress</div>
+                <div class="menu-item" onclick="window.location.href='rewards.html'"><i class="fas fa-trophy"></i> Achievements</div>
+                <div class="menu-item"><i class="fas fa-cog"></i> Settings</div>
+                <div class="menu-item" onclick="window.location.href='login.html'"><i class="fas fa-sign-in-alt"></i> Login</div>
+            </nav>
+        </aside>
+        <main class="main-content" id="main-content">
+            <header>
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Nagrik Aur Samvidhan Learning Platform</h1>
+            </header>
+
+        
+            <h1>Spin the Wheel Game - Constitution Articles</h1>
+            <div id="wheel">📜</div>
+            <button id="spinButton">Spin the Wheel</button>
+            <div id="result"></div>
+    
+        </main>
+    </div>
+
+    <script>
+        const outcomes = [
+    'Article 14: Equality before law',
+    'Article 19: Freedom of speech',
+    'Article 21: Right to life',
+    'Article 32: Right to constitutional remedies',
+    'Article 44: Uniform civil code',
+    'Article 51A: Fundamental duties',
+    'Article 368: Power to amend the Constitution'
+];
+
+document.getElementById('spinButton').addEventListener('click', function() {
+    const randomIndex = Math.floor(Math.random() * outcomes.length);
+    const result = outcomes[randomIndex];
+
+    // Rotate the wheel (for effect)
+    const wheel = document.getElementById('wheel');
+    wheel.style.transition = 'transform 2s ease-out';
+    wheel.style.transform = 'rotate(' + (Math.random() * 360 + 1080) + 'deg)'; // Rotate at least 3 times
+
+    // Show the result after a delay
+    setTimeout(() => {
+        document.getElementById('result').textContent = "You landed on: " + result;
+
+        // Create the Start button
+        const startButton = document.createElement('button');
+        startButton.textContent = 'Start Quiz';
+        startButton.style.backgroundColor = '#28a745';
+        startButton.style.color = 'white';
+        startButton.style.padding = '10px 20px';
+        startButton.style.marginTop = '20px';
+        startButton.style.border = 'none';
+        startButton.style.borderRadius = '5px';
+        startButton.style.cursor = 'pointer';
+        startButton.id = 'startButton';
+
+        // Append the Start button if it doesn't already exist
+        if (!document.getElementById('startButton')) {
+            document.body.appendChild(startButton);
+        }
+
+        // Add event listener to the Start button
+        startButton.addEventListener('click', function() {
+            // Redirect to the quiz page, passing the result as a query parameter
+            window.location.href = `quiz.html?article=${encodeURIComponent(result)}`;
+        });
+    }, 2000); // Delay for spin effect
+});
+document.addEventListener("DOMContentLoaded", function() {
+    const burgerIcon = document.getElementById("burger-icon");
+    const sidebar = document.getElementById("sidebar");
+    
+    // Toggle sidebar open/close
+    burgerIcon.addEventListener("click", function() {
+        sidebar.classList.toggle("open");
+    
+        // If the sidebar is open, push content to the right
+        if (sidebar.classList.contains("open")) {
+        document.querySelector(".main-content").style.marginLeft = "250px";
+        } else {
+        // Otherwise, return content to the original position
+        document.querySelector(".main-content").style.marginLeft = "0";
+        }
+    });
+    });
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+    const mainContent = document.getElementById('main-content');
+
+    menuToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+        mainContent.classList.toggle('sidebar-open');
+    });
+
+    </script>
+    
+    
+
+</body>
+</html>

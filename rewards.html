@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Achievements - Constitutional Learning Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <link href="rewardsStyles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <h2 style="color: white;">My Dashboard</h2>
+            <img src="img/profile-pic.jpg" alt="Profile Picture" class="profile-img">
+            <p>Welcome, Learner!</p>
+            <nav>
+                <div class="menu-item" onclick="window.location.href='home.html'"><i class="fas fa-home"></i> Home</div>
+                <div class="menu-item"><i class="fas fa-user"></i> Profile</div>
+                <div class="menu-item"><i class="fas fa-book"></i> My Courses</div>
+                <div class="menu-item" onclick="window.location.href='progress.html'"><i class="fas fa-chart-line"></i> Progress</div>
+                <div class="menu-item" onclick="window.location.href='rewards.html'"><i class="fas fa-trophy"></i> Achievements</div>
+                <div class="menu-item"><i class="fas fa-cog"></i> Settings</div>
+                <div class="menu-item" onclick="window.location.href='login.html'"><i class="fas fa-sign-in-alt"></i> Login</div>
+            </nav>
+        </aside>
+        <main class="main-content" id="main-content">
+            <header>
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 style="color: white;">Nagrik Aur Samvidhan Learning Platform</h1>
+            </header>
+            <h1>Your Achievements</h1>
+            
+            <div class="section">
+                <h2>Earned Badges</h2>
+                <div class="badge-list">
+                    <div class="badge earned" data-name="Constitution Expert" data-description="Mastered the fundamentals of constitutional law">🏛️</div>
+                    <div class="badge earned" data-name="Rights Defender" data-description="Successfully completed advanced civil rights courses">⚖️</div>
+                    <div class="badge earned" data-name="Civic Leader" data-description="Demonstrated exceptional leadership in community projects">🎖️</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Badge Pathway</h2>
+                <div class="pathway">
+                    <div class="badge earned" data-name="Novice Citizen" data-description="Completed the introduction to civics course">🇺🇸</div>
+                    <div class="badge earned" data-name="Constitution Expert" data-description="Mastered the fundamentals of constitutional law">🏛️</div>
+                    <div class="badge locked" data-name="Policy Analyst" data-description="Analyze and interpret complex policy issues">📊</div>
+                    <div class="badge locked" data-name="Diplomacy Master" data-description="Excel in international relations and diplomacy">🌍</div>
+                    <div class="badge locked" data-name="Supreme Justice" data-description="Achieve the highest level of constitutional expertise">👨‍⚖️</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Your Progress</h2>
+                <div class="stats">
+                    <div class="stat-card">
+                        <h3>Current Level</h3>
+                        <div class="stat-value" id="level">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Courses Completed</h3>
+                        <div class="stat-value" id="courses">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Reward Points</h3>
+                        <div class="stat-value" id="points">0</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>League Rankings</h2>
+                <div class="leagues">
+                    <div class="league">
+                        <div class="league-name">Bronze League</div>
+                        <div class="league-level">Max Level: 10</div>
+                    </div>
+                    <div class="league">
+                        <div class="league-name">Silver League</div>
+                        <div class="league-level">Max Level: 20</div>
+                    </div>
+                    <div class="league">
+                        <div class="league-name">Gold League</div>
+                        <div class="league-level">Max Level: 30</div>
+                    </div>
+                    <div class="league">
+                        <div class="league-name">Platinum League</div>
+                        <div class="league-level">Max Level: 50</div>
+                    </div>
+                </div>
+            </div>
+        
+
+            <div class="badge-info">
+                <span class="close-btn">&times;</span>
+                <h3 id="badge-name"></h3>
+                <p id="badge-description"></p>
+            </div>
+
+            <div class="overlay"></div>
+        </main>
+    
+    </div>
+    <script src="rewardsScripts.js"></script>
+</body>
+</html>
