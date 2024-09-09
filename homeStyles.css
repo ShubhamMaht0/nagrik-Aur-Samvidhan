@@ -73,7 +73,7 @@ body {
 header {
   background: linear-gradient(to right, var(--primary-color), #3949ab);
   color: white;
-  padding: 20px;
+  padding: 2`rem;
   text-align: center;
   position: relative;
 }
@@ -159,6 +159,25 @@ header {
   padding: 3px 8px;
   border-radius: 10px;
   font-size: 0.8em;
+}
+
+
+.logo {
+  width: 8rem; /* Adjust the logo size as needed */
+  height: auto;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+h1 {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
+}
+
+.menu-toggle {
+  margin-left: 10px;
 }
 
 @media (max-width: 768px) {
