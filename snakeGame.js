@@ -28,11 +28,11 @@ const board = document.querySelector('.board');
         };
 
         const constitutionQuestions = [
-            { question: "What year was the U.S. Constitution signed?", answer: "1787" },
-            { question: "How many articles are in the U.S. Constitution?", answer: "7" },
-            { question: "Who is known as the 'Father of the Constitution'?", answer: "James Madison" },
-            { question: "What are the first ten amendments to the Constitution called?", answer: "Bill of Rights" },
-            { question: "How many amendments does the Constitution have?", answer: "27" }
+            { question: "Which Article of the Indian Constitution guarantees the Right to Equality?", answer: "14" },
+            { question: "Under which Article is the Right to Freedom of Religion guaranteed?", answer: "25" },
+            { question: "Which Fundamental Right prohibits discrimination on grounds of religion, race, caste, sex, or place of birth?", answer: "Right to Equality" },
+            { question: "How many Fundamental Duties are listed in the Indian Constitution?", answer: "11" },
+            { question: "Which Article of the Indian Constitution enumerates the Fundamental Duties of citizens?", answer: "51A" }
         ];
 
         function updatePlayerPosition(player) {
