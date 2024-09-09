@@ -41,6 +41,12 @@ function addComment() {
 
 // Function to load video
 function loadVideo(videoId) {
-    var videoPlayer = document.getElementById('videoPlayer');
-    videoPlayer.src = 'https://www.youtube.com/embed/' + videoId;
+    // Get the iframe element
+    const iframe = document.querySelector('.video-container iframe');
+
+    // Update the iframe's `src` attribute to load the new video
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+
+    // Scroll to the video section after selecting a video
+    iframe.scrollIntoView({ behavior: "smooth" });
 }
