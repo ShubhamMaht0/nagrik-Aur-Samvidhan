@@ -11,122 +11,240 @@
 <body>
     <div class="container">
         <aside class="sidebar" id="sidebar">
-            <h2>My Dashboard</h2>
+            <h2 data-translate="myDashboard">My Dashboard</h2>
             <img src="img/profile-pic.jpg" alt="Profile Picture" class="profile-img">
-            <p>Welcome, Learner!</p>
+            <p><span data-translate="welcome">Welcome</span>, <span data-translate="learner">Learner</span>!</p>
             <nav>
-                <div class="menu-item" onclick="window.location.href='index.html'"><i class="fas fa-home"></i> Home</div>
-                <div class="menu-item"><i class="fas fa-user"></i> Profile</div>
-                <div class="menu-item"><i class="fas fa-book"></i> My Courses</div>
-                <div class="menu-item" onclick="window.location.href='progress.html'"><i class="fas fa-chart-line"></i> Progress</div>
-                <div class="menu-item" onclick="window.location.href='rewards.html'"><i class="fas fa-trophy"></i> Achievements</div>
-                <div class="menu-item"><i class="fas fa-cog"></i> Settings</div>
-                <div class="menu-item" onclick="window.location.href='login.html'"><i class="fas fa-sign-in-alt"></i> Login</div>
+                <div class="menu-item" onclick="window.location.href='index.html'"><i class="fas fa-home"></i> <span data-translate="home">Home</span></div>
+                <div class="menu-item"><i class="fas fa-user"></i> <span data-translate="profile">Profile</span></div>
+                <div class="menu-item"><i class="fas fa-book"></i> <span data-translate="myCourses">My Courses</span></div>
+                <div class="menu-item" onclick="window.location.href='progress.html'"><i class="fas fa-chart-line"></i> <span data-translate="progress">Progress</span></div>
+                <div class="menu-item" onclick="window.location.href='rewards.html'"><i class="fas fa-trophy"></i> <span data-translate="achievements">Achievements</span></div>
+                <div class="menu-item"><i class="fas fa-cog"></i> <span data-translate="settings">Settings</span></div>
+                <div class="menu-item" onclick="window.location.href='login.html'"><i class="fas fa-sign-in-alt"></i> <span data-translate="login">Login</span></div>
             </nav>
+            <div class="language-selector"></div>
+                <label for="language"><i class="fas fa-globe"></i> <span data-translate="language">Language</span>:</label>
+                <select id="language" onchange="changeLanguage()">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी (Hindi)</option>
+                    <option value="bn">বাংলা (Bengali)</option>
+                    <option value="te">తెలుగు (Telugu)</option>
+                    <option value="ta">தமிழ் (Tamil)</option>
+                    <option value="mr">मराठी (Marathi)</option>
+                </select>
+            </div>
         </aside>
         <main class="main-content" id="main-content">
             <header>
                 <button class="menu-toggle" id="menu-toggle">
                     <i class="fas fa-bars"></i>
                 </button>
-                <h1>Nagrik Aur Samvidhan Learning Platform</h1>
+                <h1 data-translate="platformTitle">Nagrik Aur Samvidhan Learning Platform</h1>
                 <img src="img/logo.png" alt="Platform Logo" class="logo">
             </header>
       
             <div class="dashboard">
                 <div class="card" onclick="window.location.href='course.html'">
                     <i class="fas fa-book card-icon"></i>
-                    <h3>Current Courses</h3>
+                    <h3 data-translate="currentCourses">Current Courses</h3>
                     <ul class="course-list">
                         <li class="course-item">
-                            <span>Indian Constitution Basics</span>
-                            <span class="badge">In Progress</span>
+                            <span data-translate="constitutionBasics">Indian Constitution Basics</span>
+                            <span class="badge" data-translate="inProgress">In Progress</span>
                         </li>
                         <li class="course-item">
-                            <span>Fundamental Rights</span>
-                            <span class="badge">New</span>
+                            <span data-translate="fundamentalRights">Fundamental Rights</span>
+                            <span class="badge" data-translate="new">New</span>
                         </li>
                         <li class="course-item">
-                            <span>Directive Principles</span>
-                            <span class="badge">Coming Soon</span>
+                            <span data-translate="directivePrinciples">Directive Principles</span>
+                            <span class="badge" data-translate="comingSoon">Coming Soon</span>
                         </li>
                     </ul>
                 </div>
                 <div class="card" onclick="window.location.href='game.html'">
-                  <i class="fas fa-gamepad card-icon"></i>
-                  <h3>Play Time</h3>
-                  <p>Keep track of your game points</p>
-                  <div class="progress-bar">
-                      <div class="progress" style="width: 10%;"></div>
-                  </div>
-                  <p>10% Complete</p>
+                    <i class="fas fa-gamepad card-icon"></i>
+                    <h3 data-translate="playTime">Play Time</h3>
+                    <p data-translate="gamePoints">Keep track of your game points</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 10%;"></div>
+                    </div>
+                    <p><span data-translate="percentComplete">Complete</span>: 10%</p>
                 </div>
-                
                 <div class="card" onclick="window.location.href='progress.html'">
                     <i class="fas fa-graduation-cap card-icon"></i>
-                    <h3>My Learning Progress</h3>
-                    <p>Keep track of your course completion</p>
+                    <h3 data-translate="learningProgress">My Learning Progress</h3>
+                    <p data-translate="progressTrack">Keep track of your course completion</p>
                     <div class="progress-bar">
                         <div class="progress" style="width: 60%;"></div>
                     </div>
-                    <p>60% Complete</p>
+                    <p><span data-translate="percentComplete">Complete</span>: 60%</p>
                 </div>
                 <div class="card" onclick="window.location.href='quiz.html'">
-                  <i class="fas fa-question card-icon"></i>
-                  <h3>Quiz Time</h3>
-                  <p>Answered Correctly</p>
-                  <div class="progress-bar">
-                      <div class="progress" style="width: 90%;"></div>
-                  </div>
-                  <p>90% Correct</p>
+                    <i class="fas fa-question card-icon"></i>
+                    <h3 data-translate="quizTime">Quiz Time</h3>
+                    <p data-translate="answeredCorrectly">Answered Correctly</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                    <p><span data-translate="percentCorrect">Correct</span>: 90%</p>
                 </div>
-                
                 <div class="card" onclick="window.location.href='rewards.html'">
                     <i class="fas fa-medal card-icon"></i>
-                    <h3>Achievements</h3>
-                    <p>Your latest accomplishments</p>
+                    <h3 data-translate="achievements">Achievements</h3>
+                    <p data-translate="latestAccomplishments">Your latest accomplishments</p>
                     <ul class="course-list">
                         <li class="course-item">
-                            <span>Constitution Quiz Master</span>
+                            <span data-translate="quizMaster">Constitution Quiz Master</span>
                             <i class="fas fa-star" style="color: gold;"></i>
                         </li>
                         <li class="course-item">
-                            <span>Rights & Duties Expert</span>
+                            <span data-translate="rightsExpert">Rights & Duties Expert</span>
                             <i class="fas fa-award" style="color: silver;"></i>
                         </li>
                     </ul>
                 </div>
                 <div class="card">
                     <i class="fas fa-chart-bar card-icon"></i>
-                    <h3>Learning Statistics</h3>
-                    <p>Your learning activity this week</p>
+                    <h3 data-translate="learningStats">Learning Statistics</h3>
+                    <p data-translate="weeklyActivity">Your learning activity this week</p>
                     <div class="progress-bar">
                         <div class="progress" style="width: 75%;"></div>
                     </div>
-                    <p>5 hours of study time</p>
+                    <p><span data-translate="studyTime">5 hours of study time</span></p>
                 </div>
                 <div class="card" onclick="window.location.href='feedback.html'">
-                  <i class="fas fa-comments card-icon"></i>
-                  <h3>Feedback</h3>
-                  <ul class="course-list">
-                      <li class="course-item">
-                          <span>I like the game section!</span>
-                          <span class="badge">Good</span>
-                      </li>
-                      <li class="course-item">
-                          <span>Lots of contents..</span>
-                          <span class="badge">Nice</span>
-                      </li>
-                      <li class="course-item">
-                          <span>Boring!!!</span>
-                          <span class="badge">Very bad</span>
-                      </li>
-                  </ul>
+                    <i class="fas fa-comments card-icon"></i>
+                    <h3 data-translate="feedback">Feedback</h3>
+                    <ul class="course-list">
+                        <li class="course-item">
+                            <span data-translate="feedbackGame">I like the game section!</span>
+                            <span class="badge" data-translate="good">Good</span>
+                        </li>
+                        <li class="course-item">
+                            <span data-translate="feedbackContent">Lots of contents..</span>
+                            <span class="badge" data-translate="nice">Nice</span>
+                        </li>
+                        <li class="course-item">
+                            <span data-translate="feedbackBoring">Boring!!!</span>
+                            <span class="badge" data-translate="veryBad">Very bad</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </main>
     </div>
 
+    <script>
+        // Translations
+        const translations = {
+            en: {
+                myDashboard: "My Dashboard",
+                welcome: "Welcome",
+                learner: "Learner",
+                home: "Home",
+                profile: "Profile",
+                myCourses: "My Courses",
+                progress: "Progress",
+                achievements: "Achievements",
+                settings: "Settings",
+                login: "Login",
+                language: "Language",
+                platformTitle: "Nagrik Aur Samvidhan Learning Platform",
+                currentCourses: "Current Courses",
+                constitutionBasics: "Indian Constitution Basics",
+                inProgress: "In Progress",
+                fundamentalRights: "Fundamental Rights",
+                new: "New",
+                directivePrinciples: "Directive Principles",
+                comingSoon: "Coming Soon",
+                playTime: "Play Time",
+                gamePoints: "Keep track of your game points",
+                percentComplete: "Complete",
+                learningProgress: "My Learning Progress",
+                progressTrack: "Keep track of your course completion",
+                quizTime: "Quiz Time",
+                answeredCorrectly: "Answered Correctly",
+                percentCorrect: "Correct",
+                latestAccomplishments: "Your latest accomplishments",
+                quizMaster: "Constitution Quiz Master",
+                rightsExpert: "Rights & Duties Expert",
+                learningStats: "Learning Statistics",
+                weeklyActivity: "Your learning activity this week",
+                studyTime: "5 hours of study time",
+                feedback: "Feedback",
+                feedbackGame: "I like the game section!",
+                good: "Good",
+                feedbackContent: "Lots of contents..",
+                nice: "Nice",
+                feedbackBoring: "Boring!!!",
+                veryBad: "Very bad"
+            },
+            hi: {
+                myDashboard: "मेरा डैशबोर्ड",
+                welcome: "स्वागत है",
+                learner: "शिक्षार्थी",
+                home: "होम",
+                profile: "प्रोफ़ाइल",
+                myCourses: "मेरे कोर्स",
+                progress: "प्रगति",
+                achievements: "उपलब्धियाँ",
+                settings: "सेटिंग्स",
+                login: "लॉगिन",
+                language: "भाषा",
+                platformTitle: "नागरिक और संविधान लर्निंग प्लेटफॉर्म",
+                currentCourses: "वर्तमान कोर्स",
+                constitutionBasics: "भारतीय संविधान की मूल बातें",
+                inProgress: "प्रगति में",
+                fundamentalRights: "मौलिक अधिकार",
+                new: "नया",
+                directivePrinciples: "निर्देशक सिद्धांत",
+                comingSoon: "जल्द आ रहा है",
+                playTime: "खेल का समय",
+                gamePoints: "अपने गेम अंकों पर नज़र रखें",
+                percentComplete: "पूर्ण",
+                learningProgress: "मेरी सीखने की प्रगति",
+                progressTrack: "अपने कोर्स की पूर्णता पर नज़र रखें",
+                quizTime: "प्रश्नोत्तरी का समय",
+                answeredCorrectly: "सही उत्तर दिए",
+                percentCorrect: "सही",
+                latestAccomplishments: "आपकी नवीनतम उपलब्धियाँ",
+                quizMaster: "संविधान प्रश्नोत्तरी मास्टर",
+                rightsExpert: "अधिकार और कर्तव्य विशेषज्ञ",
+                learningStats: "सीखने के आँकड़े",
+                weeklyActivity: "इस सप्ताह आपकी सीखने की गतिविधि",
+                studyTime: "5 घंटे का अध्ययन समय",
+                feedback: "प्रतिक्रिया",
+                feedbackGame: "मुझे गेम सेक्शन पसंद है!",
+                good: "अच्छा",
+                feedbackContent: "बहुत सारी सामग्री..",
+                nice: "बढ़िया",
+                feedbackBoring: "उबाऊ!!!",
+                veryBad: "बहुत बुरा"
+            }
+            // Add more languages here...
+        };
+
+        function changeLanguage() {
+            const language = document.getElementById("language").value;
+            document.documentElement.lang = language;
+            updateContent(language);
+        }
+
+        function updateContent(language) {
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[language] && translations[language][key]) {
+                    element.textContent = translations[language][key];
+                }
+            });
+        }
+
+        // Initialize with English
+        updateContent('en');
+    </script>
     <script src="homeScripts.js"></script>
 </body>
 </html>

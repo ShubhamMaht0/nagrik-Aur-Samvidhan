@@ -16,7 +16,7 @@ body {
 
 .container {
   display: flex;
-  min-height: 100vh;
+  min-height: 3vh;
 }
 
 .sidebar {
@@ -179,6 +179,7 @@ h1 {
 .menu-toggle {
   margin-left: 10px;
 }
+
 
 @media (max-width: 768px) {
   .main-content.sidebar-open {
