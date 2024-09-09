@@ -73,7 +73,7 @@ body {
 header {
   background: linear-gradient(to right, var(--primary-color), #3949ab);
   color: white;
-  padding: 2`rem;
+  padding: 2rem;
   text-align: center;
   position: relative;
 }
